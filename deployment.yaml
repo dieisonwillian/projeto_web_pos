@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: web
-        image: meusite
+        image: dieisonwillian/meusitepy:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5000
 ---
 apiVersion: v1
 kind: Service
