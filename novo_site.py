@@ -1,12 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
+from valida.login import validalogin
 
 app = Flask(__name__)
-
-# Usuário e senha fixos para demonstração
-USERS = {
-    'dieison': 'senha123',
-    'admin': '123456'
-}
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
@@ -14,7 +9,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         
-        if username in USERS and USERS[username] == password:
+        if validalogin(username,password):
             return redirect(url_for('info', username=username))
         else:
             error = 'Usuário ou senha inválidos'
