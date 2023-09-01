@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Usuarios</title>
+    <title>Informações Confidenciais</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }        
+        .info-box {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <p>Meu Site</p>
-    <p></p>
-    <P>Usuarios = {{nome_usuario}}</P>
+    <div class="info-box">
+        <h2>Pagina Pessoal!</h2>
+        <p>Bem-vindo, {{ username }}! Você conseguiu fazer o login com sucesso!!</p>
+    </div>
 </body>
 </html>
